@@ -1,14 +1,14 @@
-import './App.css';
-import Nav from './lib/nav';
-import CenterBlock from './lib/centerblock';
-import Sidebar from './lib/sidebar';
-import Bar from './lib/bar';
+import './App.css'
+import Nav from './components/navigation/nav';
+import CenterBlock from './components/centerblock/centerblock';
+import Sidebar from './components/sidebar/sidebar';
+import Bar from './components/bar/bar';
 
 function App() {
   return (
     <div className="wrapper">
      <div className='container'>
-     <main className='main__nav nav'>
+     <main className='main'>
           <Nav />
           <CenterBlock />
           <Sidebar />

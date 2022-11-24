@@ -1,11 +1,26 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/anchor-has-content */
+import watchSvg from '../../img/icon/watch.svg'
+// import dislikeSvg from '../../img/icon/dislike.svg'
+import likeSvg from '../../img/icon/like.svg'
+// import nextSvg from '../../img/icon/next.svg'
+import noteSvg from '../../img/icon/note.svg'
+// import prevSvg from '../../img/icon/prev.svg'
+// import playSvg from '../../img/icon/play.svg'
+// import repeatSvg from '../../img/icon/repeat.svg'
+// import shuffleSvg from '../../img/icon/shuffle.svg'
+import spriteSvg from '../../img/icon/sprite.svg'
+// import volumeSvg from '../../img/icon/volume.svg'
+import searchSvg from '../../img/icon/search.svg'
+
+
+
 function CenterBlock(){
     return (
         <div className="main__centerblock centerblock">
         <div className="centerblock__search search">
           <svg className="search__svg">
-            <use xlinkHref="src/img/icon/sprite.svg#icon-search" />
+            <use xlinkHref={searchSvg} />
           </svg>
           <input
             className="search__text"
@@ -28,7 +43,7 @@ function CenterBlock(){
             <div className="playlist-title__col col03">АЛЬБОМ</div>
             <div className="playlist-title__col col04">
               <svg className="playlist-title__svg" alt="time">
-                <use xlinkHref="src/img/icon/sprite.svg#icon-watch" />
+                <use xlinkHref={watchSvg} />
               </svg>
             </div>
           </div>
@@ -38,7 +53,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -59,7 +74,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text">4:44</span>
                 </div>
@@ -70,7 +85,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -91,7 +106,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text">2:22</span>
                 </div>
@@ -102,7 +117,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={spriteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -123,7 +138,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={spriteSvg} />
                   </svg>
                   <span className="track__time-text">2:22</span>
                 </div>
@@ -134,7 +149,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -155,7 +170,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text">4:12</span>
                 </div>
@@ -166,7 +181,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -187,8 +202,8 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
-                  </svg>
+                    <use xlinkHref={likeSvg} />
+                  </svg>  
                   <span className="track__time-text">2:54</span>
                 </div>
               </div>
@@ -198,7 +213,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -220,7 +235,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text">5:20</span>
                 </div>
@@ -231,7 +246,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -253,7 +268,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text">3:41</span>
                 </div>
@@ -264,7 +279,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -285,7 +300,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text">1:48</span>
                 </div>
@@ -296,7 +311,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -317,7 +332,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text">3:32</span>
                 </div>
@@ -328,7 +343,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -349,7 +364,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text">3:36</span>
                 </div>
@@ -360,7 +375,7 @@ function CenterBlock(){
                 <div className="track__title">
                   <div className="track__title-image">
                     <svg className="track__title-svg" alt="music">
-                      <use xlinkHref="src/img/icon/sprite.svg#icon-note" />
+                      <use xlinkHref={noteSvg} />
                     </svg>
                   </div>
                   <div className="track__title-text">
@@ -378,7 +393,7 @@ function CenterBlock(){
                 </div>
                 <div className="track__time">
                   <svg className="track__time-svg" alt="time">
-                    <use xlinkHref="src/img/icon/sprite.svg#icon-like" />
+                    <use xlinkHref={likeSvg} />
                   </svg>
                   <span className="track__time-text" />
                 </div>
