@@ -1,21 +1,39 @@
-/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
+import { useState } from 'react';
+import {DropDownList, DropwDownYear} from '../filters';
 import watchSvg from '../../img/icon/watch.svg'
-// import dislikeSvg from '../../img/icon/dislike.svg'
 import likeSvg from '../../img/icon/like.svg'
-// import nextSvg from '../../img/icon/next.svg'
 import noteSvg from '../../img/icon/note.svg'
-// import prevSvg from '../../img/icon/prev.svg'
-// import playSvg from '../../img/icon/play.svg'
-// import repeatSvg from '../../img/icon/repeat.svg'
-// import shuffleSvg from '../../img/icon/shuffle.svg'
 import spriteSvg from '../../img/icon/sprite.svg'
-// import volumeSvg from '../../img/icon/volume.svg'
 import searchSvg from '../../img/icon/search.svg'
 
+const performers = 
+[
+  'Michael Jakson',
+  'Frank Sinatra',
+  'Calvin Harris',
+  'Zhu',
+  'Arctic Monkeys'
+]
 
+const genres = [
+  'Рок',
+  'Хип-хоп',
+  'Поп-музыка',
+  'Техно',
+  'Инди'
+]
 
 function CenterBlock(){
+ 
+  const [visible, setVisible] = useState(false);
+  const toggleVisibility = () => setVisible(!visible);
+  
     return (
         <div className="main__centerblock centerblock">
         <div className="centerblock__search search">
@@ -32,10 +50,23 @@ function CenterBlock(){
         <h2 className="centerblock__h2">Треки</h2>
         <div className="centerblock__filter filter">
           <div className="filter__title">Искать по:</div>
-          <div className="filter__button button-author _btn-text">исполнителю</div>
-          <div className="filter__button button-year _btn-text">году выпуска</div>
-          <div className="filter__button button-genre _btn-text">жанру</div>
+          <div className="filter__button button-author _btn-text" onClick={toggleVisibility}>исполнителю
+          {visible && (
+            <DropDownList item = {performers}/>
+            )}  </div>
+          
+          <div className="filter__button button-year _btn-text" onClick={toggleVisibility}>году выпуска
+          {visible && (
+            <DropwDownYear/>
+            )} 
+          </div>
+          <div className="filter__button button-genre _btn-text" onClick={toggleVisibility}>жанру
+          {visible && (
+            <DropDownList item = {genres}/>
+            )}
+          </div>
         </div>
+        
         <div className="centerblock__content">
           <div className="content__title playlist-title">
             <div className="playlist-title__col col01">Трек</div>
