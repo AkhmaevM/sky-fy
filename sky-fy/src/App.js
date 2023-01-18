@@ -1,25 +1,26 @@
+
 import './App.css'
+import 'react-loading-skeleton/dist/skeleton.css'
 import Nav from './components/navigation/nav';
 import CenterBlock from './components/centerblock/centerblock';
 import Sidebar from './components/sidebar/sidebar';
 import Bar from './components/bar/bar';
 
 function App() {
-  return (
+
+  return(
     <div className="wrapper">
      <div className='container'>
      <main className='main'>
           <Nav />
           <CenterBlock />
-          <Sidebar />
+          <Sidebar  />
       </main>
       <Bar />
       <footer className="footer" />
      </div>
     </div>
-  );
+  )
 }
-
-
 
 export default App;

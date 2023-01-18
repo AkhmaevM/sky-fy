@@ -1,10 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-
-import playList1 from '../../img/playlist01.png'
-import playList2 from '../../img/playlist02.png'
-import playList3 from '../../img/playlist03.png'
+import { useEffect, useState } from "react"
+import Skeleton from "react-loading-skeleton"
+import { Playlist01 , Playlist02 , Playlist03 } from "./playlist"
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function Sidebar() {
+   
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(()=>{
+        setTimeout(() => {
+            setIsLoading(false) 
+        }, 3000);
+    })
+    
     return (
         <div className="main__sidebar sidebar">
                     <div className="sidebar__personal">
@@ -12,22 +21,25 @@ function Sidebar() {
                         <div className="sidebar__avatar" />
                     </div>
                     <div className="sidebar__block">
-                        <div className="sidebar__list">
-                            <div className="sidebar__item">
-                                <a className="sidebar__link" href="#">
-                                    <img className="sidebar__img" src={playList1} alt="day's playlist" />
-                                </a>
-                            </div>
-                            <div className="sidebar__item">
-                                <a className="sidebar__link" href="#">
-                                    <img className="sidebar__img" src={playList2} alt="day's playlist" />
-                                </a>
-                            </div>
-                            <div className="sidebar__item">
-                                <a className="sidebar__link" href="#">
-                                    <img className="sidebar__img" src={playList3} alt="day's playlist" />
-                                </a>
-                            </div>
+                        <div className="sidebar__list" >
+                                <div className="sidebar__item">
+                                    <a className="sidebar__link" href="#">
+                                        {isLoading ? <Skeleton height={150} baseColor="#313131"/> : <Playlist01 /> }
+                                    </a>
+                               </div>
+                              <div className="sidebar__item">
+                                     <a className="sidebar__link" href="#">
+                                     {isLoading ? <Skeleton height={150} baseColor="#313131" /> : <Playlist02 /> }
+                                     </a>
+                                </div>
+
+                                <div className="sidebar__item">
+                                     <a className="sidebar__link" href="#">
+                                     {isLoading ? <Skeleton height={150} baseColor="#313131" /> : <Playlist03 /> }
+                                     </a>
+                                </div>
+    
+                              
                         </div>
                     </div>
                 </div>

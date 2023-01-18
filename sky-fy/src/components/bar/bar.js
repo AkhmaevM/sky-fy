@@ -1,18 +1,26 @@
-// import watchSvg from '../../img/icon/watch.svg'
-import dislikeSvg from '../../img/icon/dislike.svg'
-import likeSvg from '../../img/icon/like.svg'
-import nextSvg from '../../img/icon/next.svg'
-import noteSvg from '../../img/icon/note.svg'
-// import prevSvg from '../../img/icon/prev.svg'
-import playSvg from '../../img/icon/play.svg'
-import repeatSvg from '../../img/icon/repeat.svg'
-import shuffleSvg from '../../img/icon/shuffle.svg'
-import spriteSvg from '../../img/icon/sprite.svg'
-import volumeSvg from '../../img/icon/volume.svg'
-// import searchSvg from '../../img/icon/search.svg'
+import { useState, useEffect } from 'react'
+import Skeleton from 'react-loading-skeleton'
+import {ReactComponent as DislikeSvg} from '../../img/icon/dislike.svg'
+import {ReactComponent as LikeSvg} from '../../img/icon/like.svg'
+import {ReactComponent as NextSvg} from '../../img/icon/next.svg'
+import {ReactComponent as NoteSvg} from '../../img/icon/note.svg'
+import { ReactComponent as PrevSvg } from '../../img/icon/prev.svg'
+import {ReactComponent as PlaySvg} from '../../img/icon/play.svg'
+import {ReactComponent as RepeatSvg} from '../../img/icon/repeat.svg'
+import {ReactComponent as ShuffleSvg} from '../../img/icon/shuffle.svg'
+import {ReactComponent as VolumeSvg} from '../../img/icon/volume.svg'
 
 
 function Bar() {
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(()=>{
+        setTimeout(() => {
+           setIsLoading(false) 
+        }, 3000);
+    })
+
+
     return (
         <div className="bar">
                 <div className="bar__content">
@@ -21,57 +29,41 @@ function Bar() {
                         <div className="bar__player player">
                             <div className="player__controls">
                                 <div className="player__btn-prev">
-                                    <svg className="player__btn-prev-svg" alt="prev">
-                                        <use xlinkHref={spriteSvg} />
-                                    </svg>
+                                    <PrevSvg />
                                 </div>
                                 <div className="player__btn-play _btn">
-                                    <svg className="player__btn-play-svg" alt="play">
-                                        <use xlinkHref={playSvg} />
-                                    </svg>
+                                    <PlaySvg />
                                 </div>
                                 <div className="player__btn-next">
-                                    <svg className="player__btn-next-svg" alt="next">
-                                        <use xlinkHref={nextSvg} />
-                                    </svg>
+                                    <NextSvg />
                                 </div>
                                 <div className="player__btn-repeat _btn-icon">
-                                    <svg className="player__btn-repeat-svg" alt="repeat">
-                                        <use xlinkHref={repeatSvg} />
-                                    </svg>
+                                    <RepeatSvg />
                                 </div>
                                 <div className="player__btn-shuffle _btn-icon">
-                                    <svg className="player__btn-shuffle-svg" alt="shuffle">
-                                        <use xlinkHref={shuffleSvg} />
-                                    </svg>
+                                    <ShuffleSvg />
                                 </div>
                             </div>
                             
                             <div className="player__track-play track-play">
                                 <div className="track-play__contain">
                                     <div className="track-play__image">
-                                        <svg className="track-play__svg" alt="music">
-                                            <use xlinkHref={noteSvg} />
-                                        </svg>
+                                        {isLoading ? <Skeleton baseColor="#313131" /> : <NoteSvg />}
                                     </div>
                                     <div className="track-play__author">
-                                        <a className="track-play__author-link" href="http://">Ты та...</a>
+                                        {isLoading ? <Skeleton height={15} baseColor="#313131" /> : <a className="track-play__author-link" href="http://">Ты та...</a>}
                                     </div>
                                     <div className="track-play__album">
-                                        <a className="track-play__album-link" href="http://">Баста</a>
+                                        {isLoading ? <Skeleton height={15} baseColor="#313131" / > :<a className="track-play__album-link" href="http://">Баста</a>}
                                     </div>
                                 </div>
 
                                 <div className="track-play__like-dis">
                                     <div className="track-play__like _btn-icon">
-                                        <svg className="track-play__like-svg" alt="like">
-                                            <use xlinkHref={likeSvg} />
-                                        </svg>
+                                        <LikeSvg />
                                     </div>
                                     <div className="track-play__dislike _btn-icon">
-                                        <svg className="track-play__dislike-svg" alt="dislike">
-                                            <use xlinkHref={dislikeSvg} />
-                                        </svg>
+                                        <DislikeSvg />
                                     </div>
                                 </div>
                             </div>
@@ -79,14 +71,11 @@ function Bar() {
                         <div className="bar__volume-block volume">
                            <div className="volume__content">
                                 <div className="volume__image">
-                                    <svg className="volume__svg" alt="volume">
-                                        <use xlinkHref={volumeSvg} />
-                                    </svg>
+                                    <VolumeSvg />
                                 </div>
                                 <div className="volume__progress _btn">
                                     <input className="volume__progress-line _btn" type="range" name="range" />
                                 </div>
-                                
                            </div>
                         </div>
                     </div>

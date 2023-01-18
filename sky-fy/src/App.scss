@@ -842,10 +842,27 @@ body {
     }
 
     &__progress {
-        width: 109px;
+       
+        width: 106px;
+        
     }
 
     &__progress-line {
-        width: 109px;
+        border: 2px solid #797979;
+        width: 106px;
+        height: 1px;
+        
     }
+}
+
+.active{
+    border: 1px solid #AD61FF;
+    color: #AD61FF;
+    cursor: pointer;
+}
+
+.active__text{
+    border-color: #AD61FF;
+    color: #AD61FF;
+    cursor: pointer;
 }
