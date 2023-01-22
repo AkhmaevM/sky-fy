@@ -51,8 +51,6 @@ body {
     height: 100%;
     font-family: 'StratosSkyeng', sans-serif;
     color: #FFFFFF;
-    
-
 }
 
 .wrapper {
@@ -608,13 +606,11 @@ body {
     background: rgba(28, 28, 28, 0.5);
 }
 
-
 .bar {
 
     &__content {
         display: flex;
         flex-direction: column;
-
     }
 
     &__player-progress {
@@ -644,8 +640,6 @@ body {
         align-items: center;
         padding: 0 92px 0 0;
     }
-
-
 }
 
 .player {
@@ -727,8 +721,6 @@ body {
         flex-direction: row;
     }
 }
-
-
 
 .track-play {
 
@@ -816,8 +808,6 @@ body {
         stroke: #696969;
     }
 }
-
-
 
 .volume {
 

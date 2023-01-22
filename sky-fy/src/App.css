@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -270,7 +270,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   /* identical to box height, or 120% */
-  font-feature-settings: "pnum" on, "lnum" on;
+  /* font-feature-settings: "pnum" on, "lnum" on;
   color: #FFFFFF;
 }
 .filter__list--item:hover {
@@ -660,7 +660,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .volume__image {
   width: 13px;
@@ -690,5 +690,8 @@ body {
 .active__text {
   border-color: #AD61FF;
   color: #AD61FF;
-  cursor: pointer;
-}/*# sourceMappingURL=App.css.map */
+  cursor: pointer; 
+} 
+*/
+
+/* # sourceMappingURL=App.css.map */

@@ -1,143 +1,62 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable import/no-named-as-default */
 /* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
+// import { useState ,useEffect } from 'react'
 
-import {  useState } from 'react';
-import {DropDownList, DropwDownYear} from '../filters';
-import {ReactComponent as WatchSvg} from '../../img/icon/watch.svg'
-import {ReactComponent as LikeSvg} from '../../img/icon/like.svg'
-import {ReactComponent as NoteSvg} from '../../img/icon/note.svg'
-import {ReactComponent as SpriteSvg} from '../../img/icon/sprite.svg'
-import {ReactComponent as SearchSvg} from '../../img/icon/search.svg'
+// import {ReactComponent as LikeSvg} from '../../img/icon/like.svg'
+// import {ReactComponent as NoteSvg} from '../../img/icon/note.svg'
+// import {ReactComponent as SpriteSvg} from '../../img/icon/sprite.svg'
+import CenterBlockSearch from './Search'
+import CenterblockFilters from './Filter'
+import { CenterblockContent, PlaylistTitle } from './styledCenterblock'
+import PlaylistItem from './Playlist'
+import * as S from './styledCenterblock'
 
 
-const performers = 
-[
-  'Michael Jakson',
-  'Frank Sinatra',
-  'Calvin Harris',
-  'Zhu',
-  'Arctic Monkeys'
-]
+const tracks = {
+  'title': ['Guilt', 'Elektro', 'I’m Fire', 'Non Stop', 'Run Run', 'Mucho Bien', 'Knives n Cherries', 'How Deep Is Your Love', ' ' ],
 
-const genres = [
-  'Рок',
-  'Хип-хоп',
-  'Поп-музыка',
-  'Техно',
-  'Инди'
-]
+  'author': ['Nero', 'Dynoro, Outwork, Mr. Gee', 'Ali Bakgor', 'Стоункат, Psychopath', 'Jaded, Will Clarke, AR/CO', 'Blue Foundation, Zeds Dead', 'HYBIT, Mr. Black, Offer Nissim, Hi Profile', 'minthaze', 'Calvin Harris, Disciples', 'Tom Boxer',  ' '  ],
+
+  'album': ['Welcome Reality', 'Elektro', 'I’m Fire', 'Non Stop', 'Run Run', 'Eyes on Fire', 'Mucho Bien', 'Captivating', 'How Deep Is Your Love', 'Soundz Made in Romania', ' '],
+
+  'time': ['4:44', '2:22', '2:22', '4:12', '2:54', '5:20', '3:41', '1:48', '3:32', '3:36', ' ']
+}
 
 function CenterBlock(){
-  
-  const [visiblePerformers, setVisiblePerformers] = useState(false);
-  const [visibleYear, setVisibleYear] = useState(false);
-  const [visibleGenres, setVisibleGenres] = useState(false);
-  
-  const toggleActive = (e)=>{
-    switch (e.target.classList.contains('active')) {
-      case true:
-        e.target.classList.remove('active')
-        break;
-    
-      case false:
-        e.target.classList.add('active')
-        break;
-      
-      default:
-        break;
+
+  function getContent() {
+    for (let i = 0; i < 11; i++) {
+      <PlaylistItem 
+      title={tracks.title[i]} 
+      author ={tracks.author[i]} 
+      album = {tracks.album[i]}
+      time = {tracks.time[i]} />
     }
-    
   }
-
-  const toggleVisibilityPerformers = (e)=>{
-    setVisiblePerformers(!visiblePerformers)
-
-    if (visibleGenres) {
-      setVisibleGenres(!visibleGenres)
-      
-    }
-    if (visibleYear) {
-      setVisibleYear(!visibleYear)
-    }
   
-    toggleActive(e)
+  return (
+      <CenterBlock>
+        <CenterBlockSearch />  
+        <S.CenterblockSubtitle>Треки</S.CenterblockSubtitle>
 
-  };
-  
-  const toggleVisibilityGenres = (e)=>{
-    setVisibleGenres(!visibleGenres)
-    if (visiblePerformers) {
-      setVisiblePerformers(!visiblePerformers)
-      
-    }
-    if (visibleYear) {
-      setVisibleYear(!visibleYear)
-    }
-    toggleActive(e)
-  };
+        <CenterblockFilters />
+          <CenterblockContent>
+            <PlaylistTitle />
 
-  const toggleVisibilityYear = (e)=>{
-    setVisibleYear(!visibleYear)
-    
-    if (visibleGenres) {
-      setVisibleGenres(!visibleGenres)
-      
-    }
-    if (visiblePerformers) {
-      setVisiblePerformers(!visiblePerformers)
-      
-    }
-    toggleActive(e)
-  };
+            <S.CenterblockPlaylist>
+             {getContent}
+            </S.CenterblockPlaylist>
 
-
-
-    return (
-
-      <div className="main__centerblock centerblock">
-          <div className="centerblock__search search">
-            <SearchSvg className="search__svg"/>
-            <input
-              className="search__text"
-              type="search"
-              placeholder="Поиск"
-              name="search" />
-          </div>
-          <h2 className="centerblock__h2">Треки</h2>
-          <div className="centerblock__filter filter">
-            <div className="filter__title">Искать по:</div>
-            <a className='filter__button button-author _btn-text' onClick={toggleVisibilityPerformers}>исполнителю
-              {visiblePerformers && (
-                <DropDownList item={performers} />
-              )}
-            </a>
-
-            <div className="filter__button button-year _btn-text" onClick={toggleVisibilityYear}>году выпуска
-              {visibleYear && (
-                <DropwDownYear />
-              )}
-            </div>
-            <div className="filter__button button-genre _btn-text" onClick={toggleVisibilityGenres}>жанру
-              {visibleGenres && (
-                <DropDownList item={genres} />
-              )}
-            </div>
-          </div>
-
-          <div className="centerblock__content">
-            <div className="content__title playlist-title">
-              <div className="playlist-title__col col01">Трек</div>
-              <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-              <div className="playlist-title__col col03">АЛЬБОМ</div>
-              <div className="playlist-title__col col04">
-                <WatchSvg />
-              </div>
-            </div>
-            <div className="content__playlist playlist">
+            </CenterblockContent>
+      </CenterBlock>
+  )
+          
+            /* <div className="content__playlist playlist">
               <div className="playlist__item">
                 <div className="playlist__track track">
                   <div className="track__title">
@@ -166,6 +85,7 @@ function CenterBlock(){
                   </div>
                 </div>
               </div>
+
               <div className="playlist__item">
                 <div className="playlist__track track">
                   <div className="track__title">
@@ -194,6 +114,7 @@ function CenterBlock(){
                   </div>
                 </div>
               </div>
+
               <div className="playlist__item">
                 <div className="playlist__track track">
                   <div className="track__title">
@@ -315,7 +236,7 @@ function CenterBlock(){
                     </div>
                     <div className="track__title-text">
                       <a className="track__title-link" href="http://">
-                        Mucho Bien{" "}
+                        Mucho Bien
                         <span className="track__title-span">(Hi Profile Remix)</span>
                       </a>
                     </div>
@@ -445,11 +366,13 @@ function CenterBlock(){
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> */
+
+          
+         
+        
       
-    )
+  
 }
 
 export default CenterBlock
