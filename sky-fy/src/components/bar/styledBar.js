@@ -95,6 +95,7 @@ export const TrackPlayImg = styled.div`
 export const TrackPlayAuthor = styled.div`
     grid-area: author;
     min-width: 49px;
+    cursor:pointer;
 `
 export const TrackPlayAuthorLink = styled.a`
     font-style: normal;
@@ -103,11 +104,13 @@ export const TrackPlayAuthorLink = styled.a`
     line-height: 24px;
     color: #FFFFFF;
     white-space: nowrap;
+    cursor:pointer;
 `
 
 export const TrackPlayAlbum = styled.div`
     grid-area: album;
     min-width: 49px;
+    
 `
 
 export const TrackPlayAlbumLink = styled.a`
@@ -127,10 +130,12 @@ export const TrackPlayLikeDislike = styled.div`
 
 export const TrackPlayLike = styled.div`
     padding: 5px;
+    cursor:pointer;
 `
 
 export const TrackPlayDislike = styled(TrackPlayLike)`
     margin-left: 28.5px;
+    cursor:pointer;
 `
 
 export const Volume = styled.div`
@@ -144,20 +149,24 @@ export const VolumeContent = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: end;
+    cursor:pointer;
 `
 
 export const VolumeImage = styled.div`
     width: 13px;
     height: 18px;
     margin-right: 17px;
+    cursor:pointer;
 `
 export const VolumeProgress = styled.div`
     width: 106px;
     cursor: pointer;
+    
 `
 
 export const VolumeProgressLine = styled.input`
     border: 2px solid #797979;
     width: 106px;
     height: 1px;
+    cursor:pointer;
 `

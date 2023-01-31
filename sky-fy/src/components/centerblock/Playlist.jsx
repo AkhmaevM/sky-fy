@@ -19,44 +19,46 @@ export default function PlaylistItem(props) {
     <S.PlaylistItem>
       
       <S.PlaylistTrack>
-            {isLoading ? <Skeleton /> : 
+              
             <S.TrackTitle>
                 <S.TrackTitleImage>
-                    <NoteSvg />
+                   {isLoading ? <Skeleton height={51} baseColor="#313131" /> : <NoteSvg />}
                 </S.TrackTitleImage>
                 
                 <S.TrackTitleText>
-                    <S.TrackTitleLink>
+                    {isLoading ? <Skeleton width={356} height={19} baseColor="#313131" /> : <S.TrackTitleLink>
                         {props.title}
-                        <S.TrackTitleSpan />
-                    </S.TrackTitleLink>
+                        <S.TrackTitleSpan>{props.gray}</S.TrackTitleSpan>
+                    </S.TrackTitleLink>}
                 </S.TrackTitleText>
             </S.TrackTitle>
-            }
-
-            {isLoading ? <Skeleton /> : 
+            
+            {isLoading ? <Skeleton height={19} baseColor="#313131" width={271} /> :
             <S.TrackAuthor>
-            <S.TrackAuthorLink>
+                    <S.TrackAuthorLink>
                         {props.author}
                     </S.TrackAuthorLink>
-            </S.TrackAuthor>
-            }
+            </S.TrackAuthor>}
+            
         
-            {isLoading ? <Skeleton /> :    <S.TrackAlbum>
+            {isLoading ? <Skeleton baseColor="#313131"  height={19} width={271} /> : 
+            <>
+            <S.TrackAlbum>
                 <S.TrackAlbumLink>
                     {props.album}
                 </S.TrackAlbumLink>
             </S.TrackAlbum>
-            }
-        
-            {isLoading ? <Skeleton /> : 
+            
             <S.TrackTime>
-                <LikeSvg />
-                <S.TrackTimeText>
-                    {props.time}
-                </S.TrackTimeText>
+
+                    <LikeSvg />
+                    <S.TrackTimeText>
+                     {props.time}
+                    </S.TrackTimeText>
             </S.TrackTime>
-            }
+            </>
+            
+                }
         </S.PlaylistTrack>
       
     </S.PlaylistItem>

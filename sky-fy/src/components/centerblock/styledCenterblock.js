@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Centerblock = styled.div`
+export const CenterBlock = styled.div`
     width: auto;
     flex-grow: 3;
     padding: 20px 40px 20px 111px;
+    color: #FFF;
 `
 
 export const CenterblockSearch = styled.div`
@@ -68,10 +69,23 @@ export const FilterButton = styled.a`
     border: 1px solid #FFFFFF;
     border-radius: 60px;
     padding: 6px 20px;
-
+    list-style-type:none;
     &:not(:last-child) {
         margin-right: 10px;
     }
+
+    &:hover{
+        border-color: #D9B6FF;
+        color: #D9B6FF;
+        cursor:pointer;
+    }
+
+    &:checked {
+        border-color: #AD61FF;
+        color: #AD61FF;
+        cursor: pointer;
+    }
+
 `
 
 export const FilterList = styled.div`
@@ -86,6 +100,10 @@ export const FilterListNav = styled.ul`
     align-items: flex-start;
     padding: 34px;
     gap: 10px;
+
+    &:hover{
+        cursor:pointer;
+    }
 `
 
 export const FilterListItem = styled.li`
@@ -98,10 +116,14 @@ export const FilterListItem = styled.li`
     line-height: 24px;
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #FFFFFF;
+    
+    list-style-type:none;
+
     &:hover{
         text-decoration-line: underline;
         font-feature-settings: 'pnum' on, 'lnum' on;
         color: #B672FF;
+        cursor:pointer;
     }
 `
 export const FilterYear = styled.div`
@@ -117,10 +139,18 @@ export const FilterYear = styled.div`
     background: #313131;
     border-radius: 12px;
     justify-content: center;
+
+    &:hover{
+        cursor:pointer;
+    }
 `
 export const FilterYearRadio = styled.input`
     width: 18px;
     height: 18px;
+
+    &:hover{
+        cursor:pointer;
+    }
 `
 
 export const FilterYearValue = styled.label`
@@ -133,6 +163,10 @@ export const FilterYearValue = styled.label`
     font-feature-settings: 'pnum' on, 'lnum' on;
     color: #FFFFFF;
     text-align:center;
+
+    &:hover{
+        cursor:pointer;
+    }
 `
 
 export const PlaylistTitle = styled.div`
@@ -154,6 +188,7 @@ export const PlaylistTitleCol = styled.div`
 
 export const Col1 = styled(PlaylistTitleCol)`
     width: 447px;
+    
 `
 
 export const Col2 = styled(PlaylistTitleCol)`
@@ -216,13 +251,15 @@ export const TrackTitleSVG = styled.svg`
 `
 
 export const TrackTitleText = styled.div`
+    
 `
 export const TrackTitleLink = styled.a`
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #FFF;
+    cursor:pointer;
 `
 export const TrackTitleSpan = styled.span`
     font-style: normal;
@@ -235,6 +272,7 @@ export const TrackAuthor = styled.div`
     width: 321px;
     display: flex;
     justify-content: flex-start;
+    cursor:pointer;
 `
 export const TrackAuthorLink = styled.a`
     font-style: normal;
@@ -243,10 +281,12 @@ export const TrackAuthorLink = styled.a`
     line-height: 24px;
     color: #FFFFFF;
     text-align: left;
+    cursor:pointer;
 `
 
 export const TrackAlbum = styled.div`
     width: 245px;
+    
 `
 
 export const TrackAlbumLink = styled.a`
@@ -255,6 +295,7 @@ export const TrackAlbumLink = styled.a`
     font-size: 16px;
     line-height: 24px;
     color: #696969;
+    cursor:pointer;
 `
 
 export const TrackTime = styled.div`
@@ -263,12 +304,13 @@ export const TrackTime = styled.div`
 export const TrackTimeSVG = styled.svg`
     width: 14px;
     height: 12px;
-    margin-right: 17px;
+   
     fill: transparent;
     stroke: #696969;
 `
 
 export const TrackTimeText = styled.span`
+    margin-left:17px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

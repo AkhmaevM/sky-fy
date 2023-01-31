@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-    }
+    },
 
     *:before,
     *:after {
@@ -29,8 +29,16 @@ export const GlobalStyles = createGlobalStyle`
             
         font-weight: 400;
         font-style: normal;
-    }
+    },
     
+    a, ul{
+        list-style-type: none;
+    },
+    
+    a:hover{
+        cursor: pointer;
+    }
+
 `
 
 export const Wrapper = styled.div`

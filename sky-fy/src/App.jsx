@@ -1,5 +1,4 @@
 
-import './App.css'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Nav from './components/navigation/nav';
 import CenterBlock from './components/centerblock/centerblock';
@@ -25,8 +24,7 @@ function App() {
             </S.Container>
           </S.Wrapper>
       </>
-        
-   
+         
   )
   //   <div className="wrapper">
   //    <div className='container'>
