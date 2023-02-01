@@ -7,6 +7,7 @@ import Bar from './components/bar/bar';
 import Footer from './components/Footer/Footer';
 import * as S from './styledApp'
 
+
 function App() {
 
   return(
@@ -26,18 +27,6 @@ function App() {
       </>
          
   )
-  //   <div className="wrapper">
-  //    <div className='container'>
-  //    <main className='main'>
-  //         <Nav />
-  //         <CenterBlock />
-  //         <Sidebar  />
-  //     </main>
-  //     <Bar />
-  //     <footer className="footer" />
-  //    </div>
-  //   </div>
-  // )
 }
 
 export default App;
