@@ -70,6 +70,7 @@ export const FilterButton = styled.a`
     border-radius: 60px;
     padding: 6px 20px;
     list-style-type:none;
+    color: ${(props)=>props.active ? "#B672FF" : "#FFFFF"};
     &:not(:last-child) {
         margin-right: 10px;
     }
@@ -84,6 +85,10 @@ export const FilterButton = styled.a`
         border-color: #AD61FF;
         color: #AD61FF;
         cursor: pointer;
+    }
+
+    &:active{
+        color: #B672FF;
     }
 
 `
@@ -109,15 +114,18 @@ export const FilterListNav = styled.ul`
 export const FilterListItem = styled.li`
     text-decoration: none;
     width: 119px;
-    font-family: 'StratosSkyeng';
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    
     font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #FFFFFF;
+    color: ${(props) => (props.active ? "#B672FF" : "#FFFFFF" )};
     
     list-style-type:none;
+
+    &:active{
+        color: #B672FF;
+    }
 
     &:hover{
         text-decoration-line: underline;

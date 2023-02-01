@@ -5,18 +5,18 @@ import playList3 from '../../img/playlist03.png'
 
  export function Playlist01(){
     return(
-          <img className="sidebar__img" src={playList1} alt="day's playlist" />
+          <img  src={playList1} alt="day's playlist" />
     )
 }
 
  export function Playlist02(){
     return(
-      <img className="sidebar__img" src={playList2} alt="day's playlist" />
+      <img  src={playList2} alt="day's playlist" />
     )
 }
 
 export  function Playlist03(){
     return(
-      <img className="sidebar__img" src={playList3} alt="day's playlist" />
+      <img src={playList3} alt="day's playlist" />
     )
 }

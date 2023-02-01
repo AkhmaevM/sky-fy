@@ -11,8 +11,8 @@ import * as S from './styledApp'
 function App() {
 
   return(
-      <>
-        <S.GlobalStyles />
+      
+        
         <S.Wrapper>
             <S.Container>
               <S.Main>
@@ -24,7 +24,7 @@ function App() {
               <Footer />
             </S.Container>
           </S.Wrapper>
-      </>
+      
          
   )
 }

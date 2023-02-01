@@ -92,7 +92,7 @@ export default function CenterblockFilters() {
 
             <S.FilterButton onClick={toggleVisibilityPerformers}>исполнителю
                 {visiblePerformers && (
-                    <DropDownList item={performers} />
+                    <DropDownList item={performers} active ="true" />
                 )}
             </S.FilterButton>
 
@@ -111,26 +111,6 @@ export default function CenterblockFilters() {
 
         </S.Filter>
       )
-        // <div className="centerblock__filter filter">
-        //     <div className="filter__title">Искать по:</div>
-        //     <a className='filter__button button-author _btn-text' onClick={toggleVisibilityPerformers}>исполнителю
-        //       {visiblePerformers && (
-        //         <DropDownList item={performers} />
-        //       )}
-        //     </a>
-
-        //     <div className="filter__button button-year _btn-text" onClick={toggleVisibilityYear}>году выпуска
-        //       {visibleYear && (
-        //         <DropwDownYear />
-        //       )}
-        //     </div>
-        //     <div className="filter__button button-genre _btn-text" onClick={toggleVisibilityGenres}>жанру
-        //       {visibleGenres && (
-        //         <DropDownList item={genres} />
-        //       )}
-        //     </div>
-        //   </div>
-
     
 
 }

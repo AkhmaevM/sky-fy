@@ -3,7 +3,6 @@ import Skeleton from 'react-loading-skeleton'
 import * as S from './styledCenterblock'
 import {ReactComponent as LikeSvg} from '../../img/icon/like.svg'
 import {ReactComponent as NoteSvg} from '../../img/icon/note.svg'
-// import {ReactComponent as SpriteSvg} from '../../img/icon/sprite.svg'
 
 export const playList = [
     {

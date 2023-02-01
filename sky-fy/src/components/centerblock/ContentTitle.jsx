@@ -16,12 +16,5 @@ export function PlaylistTitle() {
             
         </S.PlaylistTitle>
 
-        // <div className="content__title playlist-title">
-        //       <div className="playlist-title__col col01">Трек</div>
-        //       <div className="playlist-title__col col02">ИСПОЛНИТЕЛЬ</div>
-        //       <div className="playlist-title__col col03">АЛЬБОМ</div>
-        //       <div className="playlist-title__col col04">
-        //         <WatchSvg />
-        //       </div>
-        // </div>
+     
 }

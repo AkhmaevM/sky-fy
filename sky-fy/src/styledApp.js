@@ -5,6 +5,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'StratosSkyeng', sans-serif;
     },
 
     *:before,
@@ -12,20 +13,12 @@ export const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     },
 
-
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-        font-family: 'StratosSkyeng', sans-serif;
-        color: #FFFFFF;
-    },
     
     @font-face {
         font-family: 'StratosSkyeng';
         src: local('StratosSkyeng'), local('StratosSkyeng'),
-            url('./fonts/stratosskyengweb-regular.woff2') format('woff2'),
-            url('./fonts/StratosSkyengweb.woff') format('woff');
+            url('public/fonts/stratosskyengweb-regular.woff2) format('woff2'),
+            url('public/fonts/StratosSkyengweb.woff') format('woff');
             
         font-weight: 400;
         font-style: normal;
@@ -39,6 +32,13 @@ export const GlobalStyles = createGlobalStyle`
         cursor: pointer;
     }
 
+` 
+
+
+export const Body = styled.body`
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
 `
 
 export const Wrapper = styled.div`

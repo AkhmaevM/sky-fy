@@ -47,34 +47,6 @@ function Sidebar() {
         </S.MainSidebar>
         
 
-        // <div className="main__sidebar sidebar">
-        //             <div className="sidebar__personal">
-        //                 <p className="sidebar__personal-name">Sergey.Ivanov</p>
-        //                 <div className="sidebar__avatar" />
-        //             </div>  
-        //             <div className="sidebar__block">
-        //                 <div className="sidebar__list" >
-        //                         <div className="sidebar__item">
-        //                             <a className="sidebar__link" href="#">
-        //                                 {isLoading ? <Skeleton height={150} baseColor="#313131"/> : <Playlist01 /> }
-        //                             </a>
-        //                        </div>
-        //                       <div className="sidebar__item">
-        //                              <a className="sidebar__link" href="#">
-        //                              {isLoading ? <Skeleton height={150} baseColor="#313131" /> : <Playlist02 /> }
-        //                              </a>
-        //                         </div>
-
-        //                         <div className="sidebar__item">
-        //                              <a className="sidebar__link" href="#">
-        //                              {isLoading ? <Skeleton height={150} baseColor="#313131" /> : <Playlist03 /> }
-        //                              </a>
-        //                         </div>
-    
-                              
-        //                 </div>
-        //             </div>
-        //         </div>
     )
 }
 export default Sidebar
