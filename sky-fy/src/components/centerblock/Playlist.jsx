@@ -87,6 +87,45 @@ export const playList = [
     }
   ]
 
+export const mockList = [
+  {
+    title :'Guilt', 
+    author :'Nero',
+    album :'Welcome Reality',
+    time :'4:44'
+  },
+  
+  {
+    title:'Elektro' ,
+    author :'Dynoro, Outwork, Mr. Gee',
+    album : 'Elektro',
+    time : '2:22'
+  },
+
+  {
+    title:'I’m Fire', 
+    author :'Ali Bakgor',
+    album : 'I’m Fire',
+    time : '2:22'
+  },
+
+  {
+    title:'Non Stop', 
+    gray: ' (Remix)',
+    author :'Стоункат, Psychopath',
+    album : 'Non Stop',
+    time : '4:12'
+  },
+
+  {
+    title:'Run Run' ,
+    gray : ' (feat. AR/CO)',
+    author :'Jaded, Will Clarke, AR/COh',
+    album : 'Run Run',
+    time : '2:54'
+  },
+]
+
 export function PlaylistItem(props) {
 
     const [isLoading, setIsLoading] = useState(true);

@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const CenterBlock = styled.div`
-    width: auto;
+    width:auto;
+    max-width: 1293px;
     flex-grow: 3;
     padding: 20px 40px 20px 111px;
     color: #FFF;
 `
-
 export const CenterblockSearch = styled.div`
     width: 100%;
     border-bottom: 1px solid #4E4E4E;
@@ -34,6 +34,10 @@ export const SearchText = styled.input`
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+
+    &:focus{
+        outline:none;
+    }
 
     &::placeholder {
         background-color: transparent;
@@ -71,6 +75,7 @@ export const FilterButton = styled.a`
     padding: 6px 20px;
     list-style-type:none;
     color: ${(props)=>props.active ? "#B672FF" : "#FFFFF"};
+    
     &:not(:last-child) {
         margin-right: 10px;
     }

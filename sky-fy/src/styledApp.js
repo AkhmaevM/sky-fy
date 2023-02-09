@@ -45,7 +45,8 @@ export const Wrapper = styled.div`
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    background-color: #383838;
+    background-color: #252525;
+
 `
 
 export const Container = styled.div`
@@ -60,7 +61,7 @@ export const Main = styled.main`
     flex: 1 1 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    column-gap:50px;
 `
 
 export const Footer = styled.footer`

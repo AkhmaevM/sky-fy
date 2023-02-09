@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-    width: 244px;
+   
     background-color: #181818;
     padding: 20px 0 20px 36px;
 `
@@ -51,7 +51,7 @@ export const MenuItem = styled.li`
     margin-bottom: 16px;
 `
 
-export const MenuLink = styled.a`
+export const MenuLink = styled.p`
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;

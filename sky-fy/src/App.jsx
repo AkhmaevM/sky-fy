@@ -1,31 +1,15 @@
-
+// import { useState } from 'react';
 import 'react-loading-skeleton/dist/skeleton.css'
-import Nav from './components/navigation/nav';
-import CenterBlock from './components/centerblock/centerblock';
-import Sidebar from './components/sidebar/sidebar';
-import Bar from './components/bar/bar';
-import Footer from './components/Footer/Footer';
 import * as S from './styledApp'
-
+import AppRoutes from './components/pages/routes';
+import { token } from './components/pages/register';
 
 function App() {
-
+  
   return(
-      
-        
-        <S.Wrapper>
-            <S.Container>
-              <S.Main>
-                <Nav />
-                <CenterBlock />
-                <Sidebar />
-              </S.Main>
-              <Bar />
-              <Footer />
-            </S.Container>
-          </S.Wrapper>
-      
-         
+    <S.Wrapper>
+      <AppRoutes token={token} />
+    </S.Wrapper>
   )
 }
 
