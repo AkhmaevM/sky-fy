@@ -66,3 +66,7 @@ export const Main = styled.main`
 
 export const Footer = styled.footer`
 `
+
+export const HidenId = styled.p`
+    display:none;
+`

@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import logo from '../../img/logo.png'
 import * as S from './styledNav'
-import { StyledLink } from '../pages/styledForm';
+import { StyledLink } from '../pages/login/styledForm';
 
 function Nav() {
     const [visible, setVisible] = useState(false);
@@ -33,7 +33,7 @@ function Nav() {
                             </S.MenuItem>
                             <S.MenuItem>
                                 <S.MenuLink>
-                                    <StyledLink to='/tracks'>
+                                    <StyledLink to='/mytracks'>
                                      Мой Плейлист
                                     </StyledLink>
                                 </S.MenuLink>

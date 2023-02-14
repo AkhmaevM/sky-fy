@@ -1,7 +1,7 @@
 // import { useState } from 'react';
 import * as S from './styledForm'
-import {ReactComponent as SkyProLogo} from '../../img/icon/skyproLogo.svg'
-import {ReactComponent as SkyProTitle} from '../../img/icon/skyproGroup.svg'
+import {ReactComponent as SkyProLogo} from '../../../img/icon/skyproLogo.svg'
+import {ReactComponent as SkyProTitle} from '../../../img/icon/skyproGroup.svg'
 import { token } from './register'
 
  export default function Login(){

@@ -2,7 +2,7 @@
 import 'react-loading-skeleton/dist/skeleton.css'
 import * as S from './styledApp'
 import AppRoutes from './components/pages/routes';
-import { token } from './components/pages/register';
+import { token } from './components/pages/login/register';
 
 function App() {
   

@@ -1,14 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-// import { Link } from "react-router-dom"
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useEffect, useState } from "react"
 import Skeleton from "react-loading-skeleton"
-import { StyledLink } from "../pages/styledForm"
+import { StyledLink } from "../pages/login/styledForm"
 import { Playlist01 , Playlist02 , Playlist03 } from "./playlist"
 import * as S from './styledSidebar'
 
-function Sidebar() {
-   
+
+function Sidebar({list}) {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(()=>{
@@ -28,34 +27,34 @@ function Sidebar() {
             <S.SidebarBlock>
                 <S.SidebarList>
                     <S.SidebarItem>
-                        <S.SidebarLink >
+                        <S.SidebarWrapper >
                             {isLoading ? <Skeleton height={150} baseColor="#313131"/> : 
-                                <StyledLink to='/daily'>
+                                <StyledLink to={`/playlist/${list[0].id}`}>
                                     <Playlist01 /> 
                                 </StyledLink>
                             }
-                        </S.SidebarLink>
+                        </S.SidebarWrapper>
                     </S.SidebarItem>
 
                     <S.SidebarItem>
-                        <S.SidebarLink>
+                        <S.SidebarWrapper>
                             {isLoading ? <Skeleton height={150} baseColor="#313131"/> : 
-                            <StyledLink to='/hits'>
+                            <StyledLink to={`/playlist/${list[1].id}`}>
                                 <Playlist02 />
                             </StyledLink>
                              }
-                        </S.SidebarLink>
+                        </S.SidebarWrapper>
                     </S.SidebarItem>
 
                     <S.SidebarItem>
-                        <S.SidebarLink>
+                        <S.SidebarWrapper>
                             
                             {isLoading ? <Skeleton height={150} baseColor="#313131"/> : 
-                            <StyledLink to='/indy'>
+                            <StyledLink to={`/playlist/${list[2].id}`}>
                                 <Playlist03 />
                             </StyledLink>
                              }
-                        </S.SidebarLink>
+                        </S.SidebarWrapper>
                     </S.SidebarItem>
                 </S.SidebarList>
             </S.SidebarBlock>

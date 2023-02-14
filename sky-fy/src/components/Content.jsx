@@ -4,6 +4,7 @@ import Sidebar from './sidebar/sidebar';
 import Bar from './bar/bar';
 import Footer from './Footer/Footer';
 import * as S from '../styledApp'
+import {LIST} from '../constance'
 
 export default function Content(){
 
@@ -12,7 +13,7 @@ export default function Content(){
               <S.Main>
                 <Nav />
                 <CenterBlock title='Треки' filter='true' main='true' />
-                <Sidebar />
+                <Sidebar list={LIST} />
               </S.Main>
               <Bar />
               <Footer />
