@@ -13,16 +13,28 @@ export const BarContent = styled.div`
     flex-direction: column;
 `
 
-export const BarPlayerProgress = styled.progress`
+export const BarPlayerProgress = styled.input`
     width: 100%;
     height: 5px;
-    background: #2E2E2E;
+    -webkit-appearance: none;
+    overflow: hidden;
+    background-color: #2E2E2E;
 
-    &::-webkit-progress-value{
+    ::-webkit-slider-runnable-track {
+        height: 10px;
+        -webkit-appearance: none;
+        color:#AD61FF;
+        margin-top: -1px;
+      }
+      
+    ::-webkit-slider-thumb {
+        width: 10px;
+        -webkit-appearance: none;
+        height: 10px;
+        cursor: pointer;
         background: #AD61FF;
-    }
-
-    
+        box-shadow: -80px 0 0 80px #AD61FF;
+      }
 `
 
 export const BarPlayerBlock = styled.div`

@@ -19,22 +19,7 @@ function Bar() {
     const [isPlaying, setIsPlaying] = useState(false)
 
     const audioRef = useRef( new Audio(track))
-    const progressRef = useRef(null)
-
-    const TrackDuration = String(audioRef.current.duration)
-    
-    const play = ()=>{
-        audioRef.current.play()
-        setIsPlaying(true);
-    }
-
-  
-
-    const pause = ()=>{
-        audioRef.current.pause()
-        setIsPlaying(false)
-      
-    }
+    const progressRef = useRef()
 
     useEffect(()=>{
         setTimeout(() => {
@@ -42,16 +27,37 @@ function Bar() {
         }, 3000);
     })
 
-    const TrackTime = String(audioRef.current.currentTime)    
+    useEffect(()=>{
+        audioRef.current.ontimeupdate = () =>{
+            const progress = (audioRef.current.currentTime / audioRef.current.duration) * 1000
+            progressRef.current.value = progress 
+        }
+    }, [audioRef, progressRef])
+    
+    const progressChange = () =>{
+        audioRef.current.currentTime = progressRef.current.value / 1000 * audioRef.current.duration
+    }
+
+    const play = ()=>{
+        audioRef.current.play()
+        setIsPlaying(true);
+    }
 
 
+    const pause = ()=>{
+        audioRef.current.pause()
+        setIsPlaying(false)
+      
+    }
+
+    
     return (
 
         <S.Bar>
             
             <S.BarContent>
                
-                <S.BarPlayerProgress min='1' max={TrackDuration} value={TrackTime} ref={progressRef} />
+                <S.BarPlayerProgress type='range' defaultValue='0' max={1000} onChange={progressChange} ref={progressRef} />
                 <S.BarPlayerBlock>
                     
                     <S.BarPlayer>
