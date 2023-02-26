@@ -69,7 +69,6 @@ function Bar() {
                                 {isPlaying ? 
                                     <S.PlayerBtnPause onClick={pause}>
                                        <img src={PauseSvg} alt="Pause" 
-                                        style={{height:25, width: 25}}
                                        />
                                     </S.PlayerBtnPause> 
                                     :

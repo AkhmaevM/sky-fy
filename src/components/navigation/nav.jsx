@@ -4,10 +4,14 @@ import logo from '../../img/logo.png'
 import * as S from './styledNav'
 import { StyledLink } from '../pages/login/styledForm';
 import { token } from '../pages/login/register';
+import ThemeSwitcher from '../../context/themeSwitcher';
 
 function Nav({list}) {
     const [visible, setVisible] = useState(false);
     const toggleVisibility = () => setVisible(!visible);
+
+    
+
     return(
 
         <S.Nav>
@@ -44,6 +48,12 @@ function Nav({list}) {
                                     <StyledLink to='/'>
                                         Выйти
                                     </StyledLink>
+                                </S.MenuLink>
+                            </S.MenuItem>
+
+                            <S.MenuItem>
+                                <S.MenuLink>
+                                <ThemeSwitcher />
                                 </S.MenuLink>
                             </S.MenuItem>
                         </S.MenuList>

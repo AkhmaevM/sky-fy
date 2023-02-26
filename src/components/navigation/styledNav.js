@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Nav = styled.nav`
    
     background-color: #181818;
@@ -60,4 +61,12 @@ export const MenuLink = styled.p`
     &:hover{
         cursor:pointer;
     }
+`
+export const ThemeSwitcherBtn = styled.button`
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+  width: 39px;
+  height: 39px;
+  background-color: #181818;
+  cursor:pointer;
 `

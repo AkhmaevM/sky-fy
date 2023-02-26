@@ -1,5 +1,6 @@
 import styled, {createGlobalStyle} from "styled-components";
 
+
 export const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
@@ -34,19 +35,17 @@ export const GlobalStyles = createGlobalStyle`
 
 ` 
 
-
 export const Body = styled.body`
     width: 100%;
     height: 100%;
-    color: #FFFFFF;
+    
 `
 
 export const Wrapper = styled.div`
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    background-color: #252525;
-
+   
 `
 
 export const Container = styled.div`
@@ -54,7 +53,7 @@ export const Container = styled.div`
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    background-color: #181818;
+    background-color:#181818;
 `
 
 export const Main = styled.main`

@@ -78,19 +78,28 @@ export const PlayerBtnPause = styled(PlayerBtnPrev)`
 export const PlayerBtnNext = styled(PlayerBtn)`
     margin-right: 28px;
     fill: #a53939;
+
+    
+   
 `
 
 export const PlayerBtnRepeat = styled(PlayerBtn)`
     margin-right: 24px;
+
+   
 `
 
 export const PlayerBtnShuffle = styled(PlayerBtn)`
     display: flex;
     align-items: center;
+
+    
+   
 `
 export const PlayerTrackPlay = styled.div`
     display: flex;
     flex-direction: row;
+    
 `
 
 export const TrackPlayContain = styled.div`
