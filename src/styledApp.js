@@ -1,6 +1,5 @@
 import styled, {createGlobalStyle} from "styled-components";
-
-
+    
 export const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
@@ -27,8 +26,11 @@ export const GlobalStyles = createGlobalStyle`
     
     a, ul{
         list-style-type: none;
+        color: #FFFFFF;
     },
     
+    
+
     a:hover{
         cursor: pointer;
     }
@@ -38,7 +40,8 @@ export const GlobalStyles = createGlobalStyle`
 export const Body = styled.body`
     width: 100%;
     height: 100%;
-    
+    color: #FFF;
+    background-color: #181818;
 `
 
 export const Wrapper = styled.div`
@@ -53,7 +56,8 @@ export const Container = styled.div`
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    background-color:#181818;
+    color: #FFFF;
+    background-color: #181818;
 `
 
 export const Main = styled.main`

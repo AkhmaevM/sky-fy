@@ -1,39 +1,45 @@
-/* eslint-disable react/jsx-no-constructed-context-values */
-import { useState } from 'react';
 
+import { useState, useMemo } from 'react';
 import 'react-loading-skeleton/dist/skeleton.css'
-import { ThemeContext } from 'styled-components';
 import * as S from './styledApp'
 import AppRoutes from './components/pages/routes';
 import { token } from './components/pages/login/register';
-import { themes, useThemeContext } from './context/theme';
+import { themes, ThemeContext } from './context/theme';
+
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState(themes.dark)
   
-  const toggleTheme=()=>{
-    if(currentTheme === themes.dark){
-      setCurrentTheme(themes.light);
-      return;
-    }
-    setCurrentTheme(themes.dark)
+const [currentTheme, setCurrentTheme] = useState(themes.dark)
+
+  function toggleTheme () {
+      setCurrentTheme(currentTheme === themes.dark ? themes.light : themes.dark)
+      console.log('theme is change');
   }
+  const memoContextTheme = useMemo(() => ({theme: currentTheme, toggleTheme}), [currentTheme ])
 
-const {theme} = useThemeContext()
 
-
+  
   return(
-    <ThemeContext.Provider value={{theme: currentTheme, toggleTheme}}>
-     
-      <S.Wrapper
-        style={{
-          backgroundColor: theme.background,
-          color: theme.color,
-        }}
-      >
-        <AppRoutes token={token} />
-    </S.Wrapper>
-    </ThemeContext.Provider>
+    <ThemeContext.Provider value={memoContextTheme}>
+      <S.Wrapper 
+        style={
+          {
+            backgroundColor: currentTheme.background,
+            color: currentTheme.color,  
+          }}
+           >
+            <S.Container
+                style={
+                  {
+                    backgroundColor: currentTheme.background,
+                    color: currentTheme.color,
+                   
+                  }}
+            >
+        <AppRoutes token={token}  />
+        </S.Container>
+      </S.Wrapper>
+      </ThemeContext.Provider>
   )
 }
 

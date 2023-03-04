@@ -85,6 +85,8 @@ export default function CenterblockFilters() {
       toggleActive(e)
     };
 
+    
+
     return(
 
         <S.Filter>

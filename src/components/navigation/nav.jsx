@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import logo from '../../img/logo.png'
 import * as S from './styledNav'
-import { StyledLink } from '../pages/login/styledForm';
 import { token } from '../pages/login/register';
 import ThemeSwitcher from '../../context/themeSwitcher';
 
@@ -31,23 +30,27 @@ function Nav({list}) {
                         <S.MenuList>
                             <S.MenuItem>
                                 <S.MenuLink>
-                                    <StyledLink to={token ?  '/main' : '/'}>
+                                    <S.NavLink to={token ?  '/main' : '/'}
+                                        style={{
+                                            color: '#FFFFF',
+                                        }}
+                                    >
                                     Главное
-                                    </StyledLink>
+                                    </S.NavLink>
                                 </S.MenuLink>
                             </S.MenuItem>
                             <S.MenuItem>
                                 <S.MenuLink>
-                                    <StyledLink to={token ? `/playlist/${list[3].id}` : `/`}>
+                                    <S.NavLink to={token ? `/playlist/${list[3].id}` : `/`}>
                                      Мой Плейлист
-                                    </StyledLink>
+                                    </S.NavLink>
                                 </S.MenuLink>
                             </S.MenuItem>
                             <S.MenuItem>
                                 <S.MenuLink>
-                                    <StyledLink to='/'>
+                                    <S.NavLink to='/'>
                                         Выйти
-                                    </StyledLink>
+                                    </S.NavLink>
                                 </S.MenuLink>
                             </S.MenuItem>
 

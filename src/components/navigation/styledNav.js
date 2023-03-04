@@ -1,9 +1,9 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
    
-    background-color: #181818;
+    
     padding: 20px 0 20px 36px;
 `
 
@@ -53,7 +53,7 @@ export const MenuItem = styled.li`
 `
 
 export const MenuLink = styled.p`
-    color: #FFFFFF;
+    
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -62,6 +62,12 @@ export const MenuLink = styled.p`
         cursor:pointer;
     }
 `
+
+export const NavLink = styled(Link)`
+    text-decoration: none;
+    
+`
+
 export const ThemeSwitcherBtn = styled.button`
   border-radius: 50%;
   border: 1px solid #FFFFFF;

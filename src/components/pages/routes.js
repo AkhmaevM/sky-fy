@@ -13,8 +13,6 @@ export default function AppRoutes(token) {
       <Route path="/register" element={<Register />} />
       <Route path="*" element={<NotFound />} />
       
-   
-
       <Route path="/" element={<ProtectedRoute isAllowed={token} /> }>
         <Route path="/mytracks" element={<MyTracks />} />
         <Route path="/playlist/:id" element={<PlaylistStock />} />

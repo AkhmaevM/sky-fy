@@ -5,7 +5,7 @@ export const CenterBlock = styled.div`
     max-width: 1293px;
     flex-grow: 3;
     padding: 20px 40px 20px 111px;
-    color: #FFF;
+    
 `
 export const CenterblockSearch = styled.div`
     width: 100%;
@@ -33,7 +33,7 @@ export const SearchText = styled.input`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+   
 
     &:focus{
         outline:none;
@@ -41,7 +41,7 @@ export const SearchText = styled.input`
 
     &::placeholder {
         background-color: transparent;
-        color: #FFFFFF;
+        
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -174,7 +174,7 @@ export const FilterYearValue = styled.label`
     font-size: 20px;
     line-height: 24px;
     font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #FFFFFF;
+    
     text-align:center;
 
     &:hover{
@@ -271,7 +271,7 @@ export const TrackTitleLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFF;
+    
     cursor:pointer;
 `
 export const TrackTitleSpan = styled.span`
@@ -292,7 +292,7 @@ export const TrackAuthorLink = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    
     text-align: left;
     cursor:pointer;
 `
