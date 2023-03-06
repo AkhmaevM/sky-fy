@@ -14,6 +14,7 @@ export const CenterblockSearch = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 `
 export const CenterblockSubtitle = styled.h2`
     font-style: normal;
@@ -33,7 +34,7 @@ export const SearchText = styled.input`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-   
+    
 
     &:focus{
         outline:none;
@@ -70,7 +71,6 @@ export const FilterButton = styled.a`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    border: 1px solid #FFFFFF;
     border-radius: 60px;
     padding: 6px 20px;
     list-style-type:none;
@@ -81,13 +81,13 @@ export const FilterButton = styled.a`
     }
 
     &:hover{
-        border-color: #D9B6FF;
+        border: 1px solid #D9B6FF;
         color: #D9B6FF;
         cursor:pointer;
     }
 
     &:checked {
-        border-color: #AD61FF;
+        border: 1px solid #AD61FF;
         color: #AD61FF;
         cursor: pointer;
     }
@@ -167,7 +167,7 @@ export const FilterYearRadio = styled.input`
 `
 
 export const FilterYearValue = styled.label`
-    width: 149px;
+   
     font-family: 'StratosSkyeng';
     font-style: normal;
     font-weight: 400;
@@ -247,8 +247,7 @@ export const TrackTitle = styled.div`
     width: 447px;
 `
 export const TrackTitleImage = styled.div`
-    width: 51px;
-    height: 51px;
+    
     padding: 16px;
     background: #313131;
     display: flex;

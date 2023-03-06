@@ -1,3 +1,5 @@
+/* eslint-disable import/no-cycle */
+/* eslint-disable import/no-mutable-exports */
 
 import { useState, useMemo } from 'react';
 import 'react-loading-skeleton/dist/skeleton.css'
@@ -6,16 +8,18 @@ import AppRoutes from './components/pages/routes';
 import { token } from './components/pages/login/register';
 import { themes, ThemeContext } from './context/theme';
 
-
+ 
+ 
 function App() {
-  
-const [currentTheme, setCurrentTheme] = useState(themes.dark)
+  const [currentTheme, setCurrentTheme] = useState(themes.dark)
 
   function toggleTheme () {
-      setCurrentTheme(currentTheme === themes.dark ? themes.light : themes.dark)
-      console.log('theme is change');
-  }
-  const memoContextTheme = useMemo(() => ({theme: currentTheme, toggleTheme}), [currentTheme ])
+    
+    setCurrentTheme(currentTheme === themes.dark ? themes.light : themes.dark)
+    console.log('theme is change ');
+}
+
+  const memoContextTheme = useMemo(() => ({theme: currentTheme, toggleTheme}), [currentTheme])
 
 
   

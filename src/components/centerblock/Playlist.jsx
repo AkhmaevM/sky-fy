@@ -3,7 +3,9 @@ import Skeleton from 'react-loading-skeleton'
 import * as S from './styledCenterblock'
 import {ReactComponent as LikeSvg} from '../../img/icon/like.svg'
 import {ReactComponent as NoteSvg} from '../../img/icon/note.svg'
-// import { ReactComponent as NoteLite } from '../../img/icon/noteLight.svg';
+import { useThemeContext } from '../../context/theme';
+import { ReactComponent as LightNote } from '../../img/icon/LightNote.svg';
+import IconItem from '../bar/icons/iconsComponents';
 
 export const playList = [
     {
@@ -137,25 +139,28 @@ export function PlaylistItem(props) {
         }, 3000);
 
     })
+
+    const {theme} = useThemeContext()
+
     return(
     <S.PlaylistItem>
       
       <S.PlaylistTrack>
               
             <S.TrackTitle>
-                <S.TrackTitleImage>
-                   {isLoading ? <Skeleton height={51} baseColor="#313131" /> : <NoteSvg />}
+                <S.TrackTitleImage style={{background: theme.default ? "#313131" : "#B1B1B1"}} >
+                   {isLoading ? <Skeleton height={51} width={51} baseColor={theme.skeleton.baseColor} /> : <IconItem defaultIcon={<NoteSvg />} lightIcon={<LightNote />} />}
                 </S.TrackTitleImage>
                 
                 <S.TrackTitleText>
-                    {isLoading ? <Skeleton width={356} height={19} baseColor="#313131" /> : <S.TrackTitleLink>
+                    {isLoading ? <Skeleton width={356} height={19} baseColor={theme.skeleton.baseColor} /> : <S.TrackTitleLink>
                         {props.title}
                         <S.TrackTitleSpan>{props.gray}</S.TrackTitleSpan>
                     </S.TrackTitleLink>}
                 </S.TrackTitleText>
             </S.TrackTitle>
             
-            {isLoading ? <Skeleton height={19} baseColor="#313131" width={271} /> :
+            {isLoading ? <Skeleton height={19} baseColor={theme.skeleton.baseColor} width={271} /> :
             <S.TrackAuthor>
                     <S.TrackAuthorLink>
                         {props.author}
@@ -163,7 +168,7 @@ export function PlaylistItem(props) {
             </S.TrackAuthor>}
             
         
-            {isLoading ? <Skeleton baseColor="#313131"  height={19} width={271} /> : 
+            {isLoading ? <Skeleton baseColor={theme.skeleton.baseColor}  height={19} width={271} /> : 
             <>
             <S.TrackAlbum>
                 <S.TrackAlbumLink>

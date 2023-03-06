@@ -6,6 +6,7 @@ import { StyledLink } from "../pages/login/styledForm"
 import { Playlist01 , Playlist02 , Playlist03 } from "./playlist"
 import * as S from './styledSidebar'
 import { token } from '../pages/login/register'
+import { useThemeContext } from '../../context/theme'
 
 function Sidebar({list}) {
     const [isLoading, setIsLoading] = useState(true)
@@ -16,12 +17,18 @@ function Sidebar({list}) {
         }, 3000);
     })
     
+    const {theme} = useThemeContext()
+
     return (
 
         <S.MainSidebar>
             <S.SidebarPersonal>
                 <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
-                <S.SidebarAvatar />
+                <S.SidebarAvatar 
+                    style={{
+                        backgroundColor: theme.avatar.background
+                    }}
+                />
             </S.SidebarPersonal>
 
             <S.SidebarBlock>

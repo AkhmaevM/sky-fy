@@ -5,13 +5,47 @@ export const themes = {
     light: {
         color: '#000000',
         background: '#F5F5F5',
-        border:'1px solid #00000',
+        border:'1px solid black',
+        default: false,
+        burger:{
+            background: 'black',
+        },
+
+        avatar:{
+            background: '#F6F5F3'
+        },
+
+        progressBar:{
+            background:' #D9D9D9'
+        },
+
+        skeleton:{
+            baseColor: '#D9D9D9',
+        }
+
+
     },
 
     dark:{
         color: '#FFFFFF',
         background: '#181818',
-        border: '1px solid #FFFFFF',
+        border: '1px solid white',
+        default: true,
+        burger:{
+            background: 'white',
+        },
+
+        avatar: {
+            background: '#313131'
+        },
+
+        progressBar:{
+            background:' #2E2E2E'
+        },
+
+        skeleton:{
+            baseColor: '#313131',
+        }
     }
 };
 

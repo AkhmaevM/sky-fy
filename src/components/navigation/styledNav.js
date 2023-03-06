@@ -57,7 +57,7 @@ export const MenuLink = styled.p`
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-
+   
     &:hover{
         cursor:pointer;
     }
@@ -70,9 +70,9 @@ export const NavLink = styled(Link)`
 
 export const ThemeSwitcherBtn = styled.button`
   border-radius: 50%;
-  border: 1px solid #FFFFFF;
+  
   width: 39px;
   height: 39px;
-  background-color: #181818;
+ 
   cursor:pointer;
 `

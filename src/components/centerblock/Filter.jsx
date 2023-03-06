@@ -2,10 +2,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
+import { useThemeContext } from "../../context/theme";
 import {DropDownList, DropwDownYear} from './Dropdown';
 import * as S from './styledCenterblock'
 
-const performers = 
+
+export const performers = 
 [
   'Michael Jakson',
   'Frank Sinatra',
@@ -14,7 +16,7 @@ const performers =
   'Arctic Monkeys'
 ]
 
-const genres = [
+export const genres = [
   'Рок',
   'Хип-хоп',
   'Поп-музыка',
@@ -22,7 +24,9 @@ const genres = [
   'Инди'
 ]
 
+
 export default function CenterblockFilters() {
+    const {theme} = useThemeContext()
     
     const [visiblePerformers, setVisiblePerformers] = useState(false);
     const [visibleYear, setVisibleYear] = useState(false);
@@ -85,29 +89,47 @@ export default function CenterblockFilters() {
       toggleActive(e)
     };
 
-    
+    const [isHover, setIsHover] = useState(false);
+
+    const handleMouseEnter = () => {
+       setIsHover(true);
+    };
+    const handleMouseLeave = () => {
+       setIsHover(false);
+    };
+ 
 
     return(
 
         <S.Filter>
             <S.FilterTitle>Искать по:</S.FilterTitle>
 
-            <S.FilterButton onClick={toggleVisibilityPerformers}>исполнителю
+            <S.FilterButton 
+             onMouseEnter={handleMouseEnter}
+             onMouseLeave={handleMouseLeave}
+            style={{border: isHover ? '1px solid #D9B6FF' : theme.border }} 
+            onClick={toggleVisibilityPerformers}>исполнителю
                 {visiblePerformers && (
-                    <DropDownList item={performers} active ="true" />
+                    <DropDownList list={[performers]} active ="true" />
                 )}
             </S.FilterButton>
 
 
-            <S.FilterButton onClick={toggleVisibilityYear}>году выпуска
+            <S.FilterButton  onMouseEnter={handleMouseEnter}
+             onMouseLeave={handleMouseLeave}
+            style={{border: isHover ? '1px solid #D9B6FF' : theme.border }} 
+            onClick={toggleVisibilityYear}>году выпуска
                 {visibleYear && (
                     <DropwDownYear /> 
                 )}  
             </S.FilterButton>  
 
-            <S.FilterButton onClick={toggleVisibilityGenres}> жанру
+            <S.FilterButton  onMouseEnter={handleMouseEnter}
+             onMouseLeave={handleMouseLeave}
+              style={{border: isHover ? '1px solid #D9B6FF' : theme.border }} 
+             onClick={toggleVisibilityGenres}> жанру
             {visibleGenres && (
-                <DropDownList item={genres} /> 
+                <DropDownList list={[genres]} /> 
               )}
             </S.FilterButton>
 

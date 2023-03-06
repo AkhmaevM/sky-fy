@@ -56,8 +56,7 @@ export const Container = styled.div`
     height: 100vh;
     margin: 0 auto;
     position: relative;
-    color: #FFFF;
-    background-color: #181818;
+    
 `
 
 export const Main = styled.main`
